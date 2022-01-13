@@ -24,6 +24,10 @@ body{
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  background: #FF0099;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .wrapper{
@@ -95,7 +99,7 @@ body{
 
 .progress-area .progress-bar{
   border-radius: inherit;
-  width: 50%;
+  width: 0;
   height: inherit;
   position: relative;
   background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
@@ -262,6 +266,11 @@ ul li .row p{
 
 ul li .audio-duration{
   font-size: 16px;
+}
+
+ul li.playing{
+  color: var(--violet);
+  pointer-events: none;
 }
 
 
